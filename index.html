@@ -7,7 +7,14 @@
 </head>
 <body>
     <h1>Requisição e Resposta via API</h1>
-    <div id="resposta"></div>
+    <!-- <div id="resposta"></div> -->
+    <div class = "minhaClasseDiv">
+        <p>
+            <span></span>
+        </p>
+    </div>
+    <button type="button" id="botao">CLIQUE AQUI</button>
+
     <script>
         const requisicao = new Request('http://localhost:3002/produtos')
          fetch(requisicao)
@@ -25,6 +32,12 @@
                     
             }
             });
+
+            
+
+            document.querySelector('[type=button]').addEventListener('click',() => {
+                document.querySelector('.minhaClasseDiv>p').innerHTML='texto interior';
+            })
          
     </script>
 </body>

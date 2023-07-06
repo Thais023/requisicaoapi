@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requisição e Resposta via API</title>
+    <title>Interaçoes com APIs</title>
 </head>
 <body>
-    <h1>Requisição e Resposta via API</h1>
-    <!-- <div id="resposta"></div> -->
-    <div class = "minhaClasseDiv">
-        <p>
-            <span></span>
-        </p>
+
+    <header>
+        <a href="./">Home</a>
+        <h1> Read com GET</h1>
+    </header>
+    <div id = "listaProdutos">
+
     </div>
-    <button type="button" id="botao">CLIQUE AQUI</button>
-
     <script>
-        const requisicao = new Request('http://localhost:3002/produtos')
-         fetch(requisicao)
-         .then(resposta => resposta.json())
-         .then(resposta =>{
-            
-            for(let i = 0; i < 3; i++){
-                let linha = `<li>${resposta[i].id}</li>`;
-                linha += `<li>${resposta[i].descricao}<li/>`;
-                linha += `<li>${resposta[i].preco}<li/>`;
-                const ul = document.createElement('#resposta').appendChild(ul).innerHTML = linha;
 
-                
-                document.querySelector('#resposta').innerHTML = linha;
-                    
+       
+        fetch('http://localhost:3002/produtos',{
+            method:'GET',
+            headers:{
+                'Content-type': 'application/json'
             }
-            });
+        })
+            .then(resposta => resposta.json())
+            .then(resposta =>{
+                for(let i = 0;i < resposta.length; i++){
 
-            
+                    const ul = document.createElement('ul');
 
-            document.querySelector('[type=button]').addEventListener('click',() => {
-                document.querySelector('.minhaClasseDiv>p').innerHTML='texto interior';
+                    ul.appendChild(document.createElement('li')).
+                    innerHTML = resposta[i].id;
+                    ul.appendChild(document.createElement('li')).
+                    innerHTML = resposta[i].descricao;
+                    ul.appendChild(document.createElement('li')).
+                    innerHTML = resposta [i].preco;
+                
+
+                    document.querySelector('#listaProdutos').appendChild
+                    (ul);
+                }
+               
             })
-         
     </script>
+        
 </body>
 </html>

@@ -5,5 +5,8 @@
         "**/*.sass",
         "**/*.ts",
         "data/db.json"
-    ]
+
+    ],
+    "liveServer.settings.host":"localhost"
+
 }

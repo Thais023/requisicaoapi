@@ -1,15 +1,19 @@
 {
-    "produtos": [
-        {
-        "id": 1,
-        "descricao":"Sapato",
-        "preco": "19,90"
-   },
-   {
-    "id":2,
-    "descricao":"Sandália",
-    "preco":"29,90"
-   }
-   
+  "produtos": [
+    {
+      "id": 1,
+      "descricao": "Sapato",
+      "preco": "19,90"
+    },
+    {
+      "id": 2,
+      "descricao": "Sandália",
+      "preco": "29,90"
+    },
+    {
+      "id": 3,
+      "descricao": "bolsa",
+      "preco": "29,90"
+    }
   ]
 }

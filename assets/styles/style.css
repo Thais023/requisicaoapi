@@ -4,4 +4,15 @@
     align-items:  center;
     flex-direction:  row;
     list-style: none;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+}
+.delete-button{
+    background-color:red;
+    font-size: 10pt;
+    border-radius: 40%;
+    color: aliceblue;
+    font-weight: bold;
+    
+
 }

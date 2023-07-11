@@ -22,4 +22,4 @@ link3.href = "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
 
     
 document.head.appendChild(styles);
-document.head.append(ink1,link2,link3)
+document.head.append(link1,link2,link3)

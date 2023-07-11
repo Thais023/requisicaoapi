@@ -16,6 +16,25 @@
     </div>
     <script src="./assets/scripts/estilos.js"></script>
     <script>
+        document.addEventListener('click',event =>{
+            if(event.target.classList.contains('delete-button')){
+
+                fetch(`http://localhost:3002/produtos/${event.target.value}`,{
+                    method:'DELETE',
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+
+                })
+                .then(resposta =>{
+                    if(resposta.ok){
+                      alert('produto apagado');
+                    location.reload();  
+                    }
+                         
+            })
+        } 
+        });
 
 
        
@@ -51,7 +70,7 @@
                     ul.appendChild(liDelete).appendChild(btDelete);
                 
 
-                    document.querySelector('#listaProdutos').appendChild
+                    document.querySelector('#listaProdutos').appendChild  
                     (ul);
                 }
                

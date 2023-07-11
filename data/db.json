@@ -1,19 +1,19 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "descricao": " Sapato",
-      "preco": "50,00"
+      "id": 4,
+      "descricao": " cinto marrom",
+      "preco": "74,50"
     },
     {
-      "id": 2,
-      "descricao": "Sandália",
-      "preco": "29,90"
+      "id": 5,
+      "descricao": "bota cano alto",
+      "preco": "120,00"
     },
     {
-      "id": 3,
-      "descricao": " Chinelo",
-      "preco": "30,90"
+      "id": 6,
+      "descricao": "Rasteira de couro",
+      "preco": "60,00"
     }
   ]
 }

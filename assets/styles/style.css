@@ -4,8 +4,8 @@
     align-items:  center;
     flex-direction:  row;
     list-style: none;
-    font-family: 'Roboto', sans-serif;
-    color: blue;
+
+    
 }
 .delete-button{
     background-color:red;
@@ -15,4 +15,33 @@
     font-weight: bold;
     
 
+}
+.produto:nth-child(even){
+    background-color:#FFF1C1;
+    border-bottom: 1px solid #000; 
+    
+
+}
+.produto:nth-child(odd){
+    background-color: #FFF;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    height: 439px;
+    
+
+}
+#btAtualizar{
+    width: 100px;
+    color: #FFF;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:normal;
+    border-radius: 4px;
+    background: #48A4FA; 
 }

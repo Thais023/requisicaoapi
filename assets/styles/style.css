@@ -26,10 +26,16 @@
     background-color: #FFF;
 }
 #form{
+    width: 420px;
+    height: 439px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     width: 420px;
     height: 439px;
+    background-color:rgb(248, 244, 244);
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     
 
 }
@@ -38,10 +44,36 @@
     color: #FFF;
     text-align: center;
     font-family: Ubuntu;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height:normal;
     border-radius: 4px;
     background: #48A4FA; 
 }
+#btCancelar{
+    width: 100px;
+    color: #444444;
+    text-align: center;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:normal;
+    border-radius: 4px;
+    background-color: #F59999;
+}
+.layout{
+width: 1440px;
+height: 1024px;  
+background-color: #FEFFE4;
+}
+#preco, #descricao, #id{
+color: #9A9A9A;
+font-family: Ubuntu;
+font-size: 16px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+}
+

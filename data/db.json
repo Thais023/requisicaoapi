@@ -1,5 +1,21 @@
 {
   "produtos": [
+    
+    {
+      "id": 1,
+      "descricao": " cinto marrom",
+      "preco": "74,50"
+    },
+    {
+      "id": 2,
+      "descricao": "bota cano alto",
+      "preco": "120,00"
+    },
+    {
+      "id": 3,
+      "descricao": "Rasteira de couro",
+      "preco": "60,00"
+    },
     {
       "id": 4,
       "descricao": " cinto marrom",

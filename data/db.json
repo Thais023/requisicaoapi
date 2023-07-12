@@ -1,14 +1,13 @@
 {
   "produtos": [
-    
     {
       "id": 1,
-      "descricao": " cinto marrom",
+      "descricao": " Cinto marrom",
       "preco": "74,50"
     },
     {
       "id": 2,
-      "descricao": "bota cano alto",
+      "descricao": "Bota cano alto",
       "preco": "120,00"
     },
     {
@@ -18,18 +17,18 @@
     },
     {
       "id": 4,
-      "descricao": " cinto marrom",
-      "preco": "74,50"
+      "descricao": " Chinelo",
+      "preco": "14,50"
     },
     {
       "id": 5,
-      "descricao": "bota cano alto",
-      "preco": "120,00"
+      "descricao": "Sapato masc",
+      "preco": "79,90"
     },
     {
       "id": 6,
-      "descricao": "Rasteira de couro",
-      "preco": "60,00"
+      "descricao": "Bota cano médio",
+      "preco": "80,50"
     }
   ]
 }

@@ -10,9 +10,11 @@
 
     <header>
         <a href="./">Home</a>
-        <h1>  Update com PUT</h1>
+        <h1 class="titulo">  Update com PUT</h1>
     </header>
+    <div id="conteiner">
         <form id="form" action="" method="post">
+            <h2 class="titulo">Alteração de Produtos</h2>
             <label for="id:">ID</label>
             <input type="text" id = "id" value="digite o ID do produto">
 
@@ -22,11 +24,13 @@
             <label for="preco:">Preço</label>
             <input type="text" id = "preco" value="digite o preço do produto">
 
-            <button type ="button" id="btAtualizar">Cadastrar</button>
+        <div class="bts">
+            <button type ="button" id="btAtualizar">Atualizar</button>
             <button type = "button"id="btCancelar">Cancelar</button>
-
+        </div>
 
         </form>
+    </div>
     <div id = "listaProdutos">
 
     </div>

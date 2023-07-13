@@ -6,6 +6,9 @@
     align-items:  center;
     flex-direction:  row;
     list-style: none;
+    margin: 0;
+    padding: 10px;
+    
 
     
 }
@@ -23,13 +26,16 @@
 }
 .produto:nth-child(odd){
     background-color: #FFF;
+    border-bottom: 1px solid #000;
+}
+#form input{
+    width: 350px;
+    height: 30px;
 }
 #form{
     display: flex;
     justify-content:center;
     padding:25px;
-    width: 420px;
-    height: 439px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -52,8 +58,14 @@
     font-weight: 400;
     line-height:normal;
     border-radius: 4px;
-    background: #48A4FA;
+    background: #45a2fa;
     flex-shrink: 0;
+    cursor: pointer;
+    border: none;
+}
+#btAtualizar:hover{
+    background-color: blue
+
 }
 #btCancelar{
     width: 118px;
@@ -67,6 +79,8 @@
     line-height:normal;
     border-radius: 4px;
     background-color: #F59999;
+    cursor: pointer;
+    border: none;
 }
 .layout{
     padding: 50px;
@@ -84,16 +98,32 @@
     line-height: normal;
 }
 .bts{
+
+    padding: 60px;
     display: flex;
     justify-content:space-evenly
     
     
+    
 }
+
+
 #conteiner{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .titulo{
+    margin-bottom: 1px;
+    font-size: 24px;
     text-align: center;
+}
+#listaProdutos{
+    padding: 90px;
+
+    
+
+    
+
+
 }

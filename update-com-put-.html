@@ -25,8 +25,8 @@
             <input type="text" id = "preco" placeholder="digite o preço do produto">
 
             <div class="bts">
-                <button type ="button" id="btAtualizar">Atualizar</button>
-                <button type = "button"id="btCancelar">Cancelar</button>
+                <button type ="button" id="btAtualizar" disabled>Atualizar</button>
+                <button type = "reset"id="btCancelar" disabled>Cancelar</button>
             </div>
 
         </form>
@@ -39,63 +39,92 @@
     <script src="./assets/scripts/estilos.js"></script>
 
     <script>
+        //Desafio 1
+        document.querySelector('#listaProdutos').addEventListener('click', event => {
+            //console.Log(event.target);
+            if(event.target.closest('ul').classList.contains('produto')) {
+                // console.Log (event.target);
+                const elementoBase = event.target.closest('ul');
 
-        document.querySelector('#btAtualizar').addEventListener('click', () => {
-            
-            const dados = {
-                'id': null,
-                'descricao': document.querySelector('#descricao').value,
-                'preco': document.querySelector('#preco').value
+                document.querySelector('input#id').value = elementoBase.querySelector('[data-produto="id"]').innerHTML;
+
+                document.querySelector('input#descricao').value = elementoBase.querySelector('[data-produto="descricao"]').innerHTML;
+
+                document.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]').innerHTML;
+                
             }
+        });
 
-            const id = document.querySelector('#id').value;
-            
+        //desafio 2
+        function verificaSeInputsestaoPreenchidos(){
+            const idPreechido = document.querySelector('input#id').value!=="";
+            const descricaoPreechido = document.querySelector('input#descricao').value!=="";
+            const precoPreechido = document.querySelector('input#preco').value!=="";
+
+            if(idPreechido || descricaoPreechido ||)
+        }
+        document.querySelector('#btAtualizar').addEventListener('click', () => {
+
+        const dados = {
+            'id': null,
+            'descricao': document.querySelector('#descricao').value,
+            'preco': document.querySelector('#preco').value
+}
+
+        const id = document.querySelector('#id').value;
+
 
             fetch(`http://localhost:3002/produtos/${id}`, {
-                method :'PUT',
-                headers: {
-                    'Content-type': 'application/json'
-                },
-                body: JSON.stringify(dados)
-            })
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(dados)
+        })
             .then(resposta => {
-                if(resposta.ok) {
+                if (resposta.ok) {
                     alert('Produto Atualizado');
                     location.reload();
                 }
-            });
+    });
+});
+        fetch('http://localhost:3002/produtos', {
+        method: 'GET',
+        headers: {
+            'Content-type': 'application/json'
+        }
+        })
+        .then(resposta => resposta.json())
+        .then(resposta => {
+
+            for (let i = 0; i < resposta.length; i++) {
+
+                const ul = document.createElement('ul');
+                ul.id = resposta[i].id;
+                ul.classList.add('produto');
+
+                const liId = document.createElement('li');
+                liId.setAttribute('data-produto', 'id');
+                liId.innerHTML = resposta[i].id;
+                liId.classList.add('produto-id');
+
+                const liDescricao = document.createElement('li');
+                liDescricao.setAttribute('data-produto', 'descricao')
+                liDescricao.innerHTML = resposta[i].descricao;
+
+                const liPreco = document.createElement('li');
+                liPreco.setAttribute('data-produto', 'preco')
+                liPreco.innerHTML = resposta[i].preco;
+
+                ul.append(liId, liDescricao, liPreco);
+                document.querySelector('#listaProdutos').append(ul);
+
+};
+})
 
 
-        });
 
-       
-       
-        fetch('http://localhost:3002/produtos',{
-            method:'GET',
-            headers:{
-                'Content-type': 'application/json'
-            }
-        })     
-            .then(resposta => resposta.json())
-            .then(resposta => {
-
-                for(let i = 0;i < resposta.length; i++){
-
-                    const ul = document.createElement('ul');
-                    ul.classList.add('produto')
-
-                    ul.appendChild(document.createElement('li')).
-                    innerHTML = resposta[i].id;
-                    ul.appendChild(document.createElement('li')).
-                    innerHTML = resposta[i].descricao;
-                    ul.appendChild(document.createElement('li')).
-                    innerHTML = resposta [i].preco;
-                
-
-                    document.querySelector('#listaProdutos').appendChild
-                    (ul);
-                }
-                })
+     
                
             
     </script>

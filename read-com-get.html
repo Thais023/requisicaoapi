@@ -14,11 +14,13 @@
     <div id = "listaProdutos">
 
     </div>
-    <script src="./assets/scripts/estilos.js"></script>
-    <script>
+    <script type="module">
+        import{ buscaProdutos } from './assets/scripts/read-com-get.js';
+        buscaProdutos()
+        </script>
+        <script src="./assets/scripts/estilos.js"></script>
 
-
-       
+    <!-- <script>
         fetch('http://localhost:3002/produtos',{
             method:'GET',
             headers:{
@@ -45,7 +47,7 @@
                 }
                
             })
-    </script>
+    </script> -->
         
 </body>
 </html>

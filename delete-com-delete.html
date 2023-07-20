@@ -13,9 +13,16 @@
     </header>
     <div id = "listaProdutos">
 
+        
+        <button type = "reset" id="btApagar">Apagar Selecionados</button>
     </div>
+
+    
     <script src="./assets/scripts/estilos.js"></script>
-    <script>
+
+    <script type="module" src="./assets/scripts/delete-com-delete.js"></script>
+
+    <!-- <script>
         document.addEventListener('click',event =>{
             if(event.target.classList.contains('delete-button')){
 
@@ -63,7 +70,7 @@
                     const btDelete = document.createElement('button');
                     btDelete.innerHTML = 'X';
                     btDelete.value = resposta[i].id;
-                    // btDelete.style.color = 'red';
+                
                     btDelete.classList.add('delete-button');
 
 
@@ -75,7 +82,7 @@
                 }
                
             })
-    </script>
+    </script> -->
         
 </body>
 </html>

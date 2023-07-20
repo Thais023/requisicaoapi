@@ -29,6 +29,11 @@
       "id": 6,
       "descricao": "Bota cano médio",
       "preco": "80,50"
+    },
+    {
+      "id": 7,
+      "descricao": "sapato infantil masc",
+      "preco": "79,90"
     }
   ]
 }

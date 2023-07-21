@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interaçoes com APIs Create com POST</title>
+    <title>Interaçoes com APIs|Create com POST</title>
 </head>
 <body>
 
     <header>
         <a href="./">Home</a>
-        <h1> Create com POST</h1>
+        <h1 id="tituloCreate"> Create com POST</h1>
     </header>
-        <form action="" method="post">
+        <form  id="formulario" action="" method="post">
             <label for="id:">ID</label>
             <input type="text" id = "id" disabled>
 
@@ -24,14 +24,15 @@
 
             <button type ="button" id="btCadastrar">Cadastrar</button>
 
-
         </form>
     <div id = "listaProdutos">
 
     </div>
     <script type="module" src = "./assets/scripts/create-com-post.js"></script>
-    
+
+    <script src="./assets/scripts/estilos.js" ></script>
     <script>
+        
 
         // document.querySelector('#btCadastrar').addEventListener('click', () => {
             

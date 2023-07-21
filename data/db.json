@@ -34,6 +34,21 @@
       "id": 7,
       "descricao": "sapato infantil masc",
       "preco": "79,90"
+    },
+    {
+      "id": 8,
+      "descricao": "Papete infantil Disney",
+      "preco": "39,90"
+    },
+    {
+      "id": 9,
+      "descricao": "sandalia preta",
+      "preco": "50,99"
+    },
+    {
+      "id": 10,
+      "descricao": "Sandalia Prata",
+      "preco": "119,90"
     }
   ]
 }

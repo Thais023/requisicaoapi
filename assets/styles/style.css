@@ -73,7 +73,7 @@
     background-color: blue
 }
 
-#btCancelar {
+#btCancelar:hover {
     width: 118px;
     height: 46px;
     color: #444444;
@@ -184,4 +184,11 @@
     border-radius: 10%;
 
     
+}
+#navbar{
+    margin-left: 50px;
+    list-style-type: style none;;
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #FFF1C1;
 }
